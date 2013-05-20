@@ -1,7 +1,5 @@
 require 'simplecov'
 require 'coveralls'
-require 'capybara'
-
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::HTMLFormatter,
   Coveralls::SimpleCov::Formatter
@@ -15,6 +13,9 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require "rails/test_help"
 
+require 'capybara/rails'
+
+
 Rails.backtrace_cleaner.remove_silencers!
 
 # Load support files
@@ -27,4 +28,9 @@ end
 
 class ActionController::TestCase
   include I18nDashboard::Engine.routes.url_helpers
+end
+
+class ActionDispatch::IntegrationTest
+  # Make the Capybara DSL available in all integration tests
+  include Capybara::DSL
 end
