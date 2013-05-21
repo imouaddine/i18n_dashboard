@@ -1,10 +1,14 @@
 require 'simplecov'
 require 'coveralls'
+
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::HTMLFormatter,
   Coveralls::SimpleCov::Formatter
 ]
-SimpleCov.start
+SimpleCov.start do
+  add_filter "/test/"
+  add_filter "/config/"
+end
 
 
 # Configure Rails Environment
@@ -14,7 +18,6 @@ require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require "rails/test_help"
 
 require 'capybara/rails'
-
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 
