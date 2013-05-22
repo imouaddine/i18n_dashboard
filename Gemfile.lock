@@ -83,7 +83,6 @@ GEM
     http_parser.rb (0.5.3)
     http_parser.rb (0.5.3-java)
     i18n (0.6.1)
-    jdbc-sqlite3 (3.7.2.1)
     journey (1.0.4)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -172,7 +171,6 @@ DEPENDENCIES
   coveralls
   haml-rails
   i18n_dashboard!
-  jdbc-sqlite3
   jquery-rails
   poltergeist
   redis
