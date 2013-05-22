@@ -4,10 +4,6 @@ rvm:
   - 1.9.3
   - rbx-19mode
 
-gemfile:
-  - gemfiles/rails-3.1.gemfile
-  - gemfiles/rails-3.2.gemfile
-  - gemfiles/rails-4.0.gemfile
 
 
 services:
