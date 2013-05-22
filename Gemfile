@@ -3,7 +3,7 @@ source "https://rubygems.org"
 # Declare your gem's dependencies in i18n-dashboard.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
-gem 'rails', '3.2.13'
+gemspec
 
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
@@ -17,13 +17,13 @@ gem "twitter-bootstrap-rails"
 
 
 group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 # Declare any dependencies that are still in development here instead of in
@@ -33,4 +33,3 @@ end
 
 # To use debugger
 # gem 'debugger'
-gemspec
