@@ -1,5 +1,6 @@
 require 'simplecov'
 require 'coveralls'
+require 'coffee_script'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::HTMLFormatter,

@@ -11,4 +11,5 @@ coverage
 .ruby-gemset
 .ruby-version
 .rvmrc
-
+Gemfile.lock
+gemfile.lock

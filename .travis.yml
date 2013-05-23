@@ -3,6 +3,9 @@ rvm:
   - 2.0.0
   - 1.9.3
 
+gemfile:
+  - gemfiles/rails-3.2.gemfile
+  - gemfiles/rails-4.0.gemfile
 
 services:
   - redis-server
