@@ -46,6 +46,7 @@ class TranslationsTest < ActionDispatch::IntegrationTest
     digest = I18nDashboard::Translation.create('test.dog', 'dog', 'en')
 
     visit '/'
+
     within("#translation_key_#{digest}") do
       click_link 'en.test.dog'
     end
@@ -100,7 +101,6 @@ class TranslationsTest < ActionDispatch::IntegrationTest
     end
 
     assert_no_selector("#translation_key_#{digest_key('test.chair')}")
-
   end
 
 
