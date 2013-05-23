@@ -5,3 +5,4 @@
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
 Dummy::Application.config.secret_token = 'aebc8457d1669ea764223297fcf3202ea74faf4401925bb407c062a2281f2923419fcb90d0b3453398f7583a73764ebcc4e0d1596de957482591cbe58974491c'
+Dummy::Application.config.secret_key_base = 'aebc8457d1669ea764223297fcf3202ea74faf4401925bb407c062a2281f2923419fcb90d0b3453398f7583a73764ebcc4e0d1596de957482591cbe58974491c'
