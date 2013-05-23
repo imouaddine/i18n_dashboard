@@ -62,6 +62,10 @@ If change the layout you should keept in mind:
   * Specify the path to te partials `render 'application/admin_menu'` instead of `render 'admin_menu'`.
   * Add prefix `main_app` to the main app routes or set `inline_main_app_named_routes = true`.
 
+## Thanks
+
+  * [Alberto Fernández-Capel](https://github.com/afcapel): [Setup integration tests with capybara](https://github.com/fourmach/i18n_dashboard/pull/1)
+  * Great tips of [Blogit](https://github.com/KatanaCode/blogit).
 
 ## Contributing
 
