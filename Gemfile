@@ -11,7 +11,7 @@ gem 'redis'
 gem "haml-rails"
 gem 'coveralls', require: false
 
-gem 'sqlite3', platform: [:ruby, :mswin, :mingw]
+gem 'sqlite3'
 gem "twitter-bootstrap-rails"
 
 
