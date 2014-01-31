@@ -11,7 +11,7 @@ module I18nDashboard
 
     def create
 
-      Translation.create(params[:key], params[:value], params[:locale])
+      Translation.create(params[:key], params[:value], params[:language])
       respond_to do |format|
         format.js{
           @digest = I18nDashboard::Translation.digest_key(params[:key])

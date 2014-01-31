@@ -8,8 +8,8 @@
     .row
       = form_tag translations_path, id: 'form-translation', remote: true do
         .span1
-          = label_tag :locale
-          = text_field_tag :locale, '', class: 'span1', autofocus: true
+          = label_tag :language
+          = text_field_tag :language, '', class: 'span1', autofocus: true
 
         .span4
           = label_tag :key

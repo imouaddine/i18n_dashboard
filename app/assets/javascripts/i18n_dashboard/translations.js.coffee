@@ -3,14 +3,14 @@ jQuery ->
 
   $('#add-translation-link').click (event) ->
     event.preventDefault()
-    $('#form-translation #locale').val('')
+    $('#form-translation #language').val('')
     $('#form-translation #key').val('')
     $('#form-translation #value').val('')
     $('#form-translation #value').trigger('autosize')
 
-  $('.edit-translation').click (event) ->
+  $('#translations-table').on "click", ".edit-translation", (event)->
     event.preventDefault()
-    $('#form-translation #locale').val($(@).data('locale'))
+    $('#form-translation #language').val($(@).data('locale'))
     $('#form-translation #key').val($(@).data('key'))
     $('#form-translation #value').val($(@).html().trim())
 
