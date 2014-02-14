@@ -2,8 +2,8 @@
   %td= key
   - I18n.available_locales.each do |locale|
     %td
-      = link_to '#', id: "#{locale}.#{key}", data: {key: key, locale: locale, toggle: "modal", target: '#add-translation'}, class: "edit-translation #{(I18nDashboard::Translation.exists?(key, locale) ? nil : 'text-error')}" do
-        = raw t(key, locale: locale, default: humanize_key(key))
+      = link_to '#', id: "#{locale}.#{key}", data: {key: key, locale: locale, toggle: "modal", target: '#add-translation', value: t(key, locale: locale, default: humanize_key(key)) }, class: "edit-translation #{(I18nDashboard::Translation.exists?(key, locale) ? nil : 'text-error')}" do
+        = t(key, locale: locale, default: humanize_key(key))
   %td
     - unless I18nDashboard::Translation.system_key?(key)
       = link_to translation_path(I18nDashboard::Translation.digest_key(key)), id: "destroy-#{I18nDashboard::Translation.digest_key(key)}", method: :delete, class: 'btn btn-mini btn-danger', remote: true do

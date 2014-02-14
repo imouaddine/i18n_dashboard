@@ -12,6 +12,5 @@ jQuery ->
     event.preventDefault()
     $('#form-translation #language').val($(@).data('locale'))
     $('#form-translation #key').val($(@).data('key'))
-    $('#form-translation #value').val($(@).html().trim())
-
+    $('#form-translation #value').val($(@).data("value").trim())
     $('#form-translation #value').trigger('autosize')
